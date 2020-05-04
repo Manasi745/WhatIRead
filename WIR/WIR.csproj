@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{B65BA254-3952-4E70-B72D-3FF8CFE48CAE}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WIR</RootNamespace>
+    <AssemblyName>WIR</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="404.html" />
+    <Content Include="about.html" />
+    <Content Include="activity.html" />
+    <Content Include="audio.mp3" />
+    <Content Include="blog-details.html" />
+    <Content Include="blog-sidebar-left.html" />
+    <Content Include="blog-sidebar-right.html" />
+    <Content Include="cart.html" />
+    <Content Include="checkout.html" />
+    <Content Include="coming-soon.html" />
+    <Content Include="contact.html" />
+    <Content Include="Content\colors\color-1.css" />
+    <Content Include="Content\custom.css" />
+    <Content Include="Content\plugins.min.css" />
+    <Content Include="Content\responsive-style.css" />
+    <Content Include="faq.html" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont3e6e.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.html" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="forums.html" />
+    <Content Include="Global.asax" />
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="group-forum.html" />
+    <Content Include="group-home.html" />
+    <Content Include="group-media.html" />
+    <Content Include="group-members.html" />
+    <Content Include="groups.html" />
+    <Content Include="home-1.html" />
+    <Content Include="home-2.html" />
+    <Content Include="home-3.html" />
+    <Content Include="home-4.html" />
+    <Content Include="img\about-img\01.jpg" />
+    <Content Include="img\activity-img\avatar-01.jpg" />
+    <Content Include="img\activity-img\avatar-02.jpg" />
+    <Content Include="img\activity-img\avatar-03.jpg" />
+    <Content Include="img\activity-img\avatar-04.jpg" />
+    <Content Include="img\activity-img\avatar-05.jpg" />
+    <Content Include="img\activity-img\avatar-06.jpg" />
+    <Content Include="img\activity-img\avatar-07.jpg" />
+    <Content Include="img\activity-img\avatar-08.jpg" />
+    <Content Include="img\activity-img\avatar-09.jpg" />
+    <Content Include="img\activity-img\gallery-embed-01.jpg" />
+    <Content Include="img\activity-img\gallery-embed-02.jpg" />
+    <Content Include="img\activity-img\gallery-embed-03.jpg" />
+    <Content Include="img\activity-img\gallery-embed-04.jpg" />
+    <Content Include="img\activity-img\gallery-embed-05.jpg" />
+    <Content Include="img\activity-img\gallery-embed-06.jpg" />
+    <Content Include="img\activity-img\link-video-poster.jpg" />
+    <Content Include="img\activity-img\profile-pic-01.jpg" />
+    <Content Include="img\activity-img\profile-pic-09.jpg" />
+    <Content Include="img\activity-img\shared-photo-01.jpg" />
+    <Content Include="img\cart-img\product-01.jpg" />
+    <Content Include="img\cart-img\product-02.jpg" />
+    <Content Include="img\cart-img\product-03.jpg" />
+    <Content Include="img\coming-soon-img\bg.jpg" />
+    <Content Include="img\comments-img\avatar-01.jpg" />
+    <Content Include="img\comments-img\avatar-02.jpg" />
+    <Content Include="img\comments-img\avatar-03.jpg" />
+    <Content Include="img\comments-img\avatar-04.jpg" />
+    <Content Include="img\cover-header-img\avatar-01.jpg" />
+    <Content Include="img\cover-header-img\avatar-02.jpg" />
+    <Content Include="img\download-img\mobile.png" />
+    <Content Include="img\faq-img\01.jpg" />
+    <Content Include="img\faq-img\02.jpg" />
+    <Content Include="img\favicon.png" />
+    <Content Include="img\footer-img\footer-widgets-bg.png" />
+    <Content Include="img\gallery-img\full-01.jpg" />
+    <Content Include="img\gallery-img\no-thumb.png" />
+    <Content Include="img\gallery-img\thumb-01.jpg" />
+    <Content Include="img\gallery-img\thumb-02.jpg" />
+    <Content Include="img\gallery-img\thumb-03.jpg" />
+    <Content Include="img\gallery-img\thumb-04.jpg" />
+    <Content Include="img\gallery-img\thumb-05.jpg" />
+    <Content Include="img\gallery-img\thumb-06.jpg" />
+    <Content Include="img\gallery-img\thumb-07.jpg" />
+    <Content Include="img\gallery-img\thumb-08.jpg" />
+    <Content Include="img\gallery-img\thumb-09.jpg" />
+    <Content Include="img\gallery-img\thumb-10.jpg" />
+    <Content Include="img\gallery-img\thumb-11.jpg" />
+    <Content Include="img\gallery-img\thumb-12.jpg" />
+    <Content Include="img\gallery-img\thumb-13.jpg" />
+    <Content Include="img\gallery-img\thumb-14.jpg" />
+    <Content Include="img\group-img\01.jpg" />
+    <Content Include="img\group-img\02.jpg" />
+    <Content Include="img\group-img\03.jpg" />
+    <Content Include="img\group-img\04.jpg" />
+    <Content Include="img\group-img\05.jpg" />
+    <Content Include="img\group-img\06.jpg" />
+    <Content Include="img\group-img\07.jpg" />
+    <Content Include="img\group-img\08.jpg" />
+    <Content Include="img\group-img\09.jpg" />
+    <Content Include="img\group-img\10.jpg" />
+    <Content Include="img\group-img\11.jpg" />
+    <Content Include="img\group-img\12.jpg" />
+    <Content Include="img\group-img\admin-avatar-01.jpg" />
+    <Content Include="img\group-img\admin-avatar-02.jpg" />
+    <Content Include="img\group-img\admin-avatar-03.jpg" />
+    <Content Include="img\how-it-works-img\01.jpg" />
+    <Content Include="img\how-it-works-img\02.jpg" />
+    <Content Include="img\how-it-works-img\03.jpg" />
+    <Content Include="img\how-it-works-img\04.jpg" />
+    <Content Include="img\how-it-works-img\icon-01.png" />
+    <Content Include="img\how-it-works-img\icon-02.png" />
+    <Content Include="img\how-it-works-img\icon-03.png" />
+    <Content Include="img\how-it-works-img\icon-04.png" />
+    <Content Include="img\light-bg.png" />
+    <Content Include="img\logo-black.png" />
+    <Content Include="img\logo-white.png" />
+    <Content Include="img\members-img\member-01.jpg" />
+    <Content Include="img\members-img\member-02.jpg" />
+    <Content Include="img\members-img\member-03.jpg" />
+    <Content Include="img\members-img\member-04.jpg" />
+    <Content Include="img\members-img\member-05.jpg" />
+    <Content Include="img\members-img\member-06.jpg" />
+    <Content Include="img\members-img\member-07.jpg" />
+    <Content Include="img\members-img\member-08.jpg" />
+    <Content Include="img\members-img\member-09.jpg" />
+    <Content Include="img\members-img\member-10.jpg" />
+    <Content Include="img\members-img\member-11.jpg" />
+    <Content Include="img\members-img\member-12.jpg" />
+    <Content Include="img\music-icon.png" />
+    <Content Include="img\owl.video.play.png" />
+    <Content Include="img\posts-img\author-bg.png" />
+    <Content Include="img\posts-img\author.jpg" />
+    <Content Include="img\posts-img\avatar-small-01.jpg" />
+    <Content Include="img\posts-img\avatar-small-02.jpg" />
+    <Content Include="img\posts-img\avatar-small-03.jpg" />
+    <Content Include="img\posts-img\avatar-small-04.jpg" />
+    <Content Include="img\posts-img\avatar-small-05.jpg" />
+    <Content Include="img\posts-img\avatar-small-06.jpg" />
+    <Content Include="img\posts-img\post-details-01.jpg" />
+    <Content Include="img\posts-img\post-item-01.jpg" />
+    <Content Include="img\posts-img\post-item-02.jpg" />
+    <Content Include="img\posts-img\post-item-03.jpg" />
+    <Content Include="img\posts-img\post-item-04.jpg" />
+    <Content Include="img\posts-img\post-item-05.jpg" />
+    <Content Include="img\preview-img\404.jpg" />
+    <Content Include="img\preview-img\about.jpg" />
+    <Content Include="img\preview-img\activity.jpg" />
+    <Content Include="img\preview-img\blog-details.jpg" />
+    <Content Include="img\preview-img\blog-sidebar-left.jpg" />
+    <Content Include="img\preview-img\blog-sidebar-right.jpg" />
+    <Content Include="img\preview-img\cart.jpg" />
+    <Content Include="img\preview-img\checkout.jpg" />
+    <Content Include="img\preview-img\coming-soon.jpg" />
+    <Content Include="img\preview-img\contact.jpg" />
+    <Content Include="img\preview-img\faq.jpg" />
+    <Content Include="img\preview-img\forums.jpg" />
+    <Content Include="img\preview-img\group-activity.jpg" />
+    <Content Include="img\preview-img\group-forum.jpg" />
+    <Content Include="img\preview-img\group-media.jpg" />
+    <Content Include="img\preview-img\group-members.jpg" />
+    <Content Include="img\preview-img\groups.jpg" />
+    <Content Include="img\preview-img\home-1.jpg" />
+    <Content Include="img\preview-img\home-2.jpg" />
+    <Content Include="img\preview-img\home-3.jpg" />
+    <Content Include="img\preview-img\home-4.jpg" />
+    <Content Include="img\preview-img\member-activity.jpg" />
+    <Content Include="img\preview-img\member-forum.jpg" />
+    <Content Include="img\preview-img\member-friends.jpg" />
+    <Content Include="img\preview-img\member-groups.jpg" />
+    <Content Include="img\preview-img\member-media.jpg" />
+    <Content Include="img\preview-img\member-profile.jpg" />
+    <Content Include="img\preview-img\members.jpg" />
+    <Content Include="img\preview-img\product-details.jpg" />
+    <Content Include="img\preview-img\products.jpg" />
+    <Content Include="img\preview-img\topic-replies.jpg" />
+    <Content Include="img\preview-img\topics.jpg" />
+    <Content Include="img\products-img\avatar-01.jpg" />
+    <Content Include="img\products-img\avatar-02.jpg" />
+    <Content Include="img\products-img\avatar-03.jpg" />
+    <Content Include="img\products-img\full-01.jpg" />
+    <Content Include="img\products-img\full-02.jpg" />
+    <Content Include="img\products-img\full-03.jpg" />
+    <Content Include="img\products-img\img-01-hover.jpg" />
+    <Content Include="img\products-img\img-01-normal.jpg" />
+    <Content Include="img\products-img\img-02-hover.jpg" />
+    <Content Include="img\products-img\img-02-normal.jpg" />
+    <Content Include="img\products-img\img-03-hover.jpg" />
+    <Content Include="img\products-img\img-03-normal.jpg" />
+    <Content Include="img\products-img\img-04-hover.jpg" />
+    <Content Include="img\products-img\img-04-normal.jpg" />
+    <Content Include="img\products-img\img-05-hover.jpg" />
+    <Content Include="img\products-img\img-05-normal.jpg" />
+    <Content Include="img\products-img\img-06-hover.jpg" />
+    <Content Include="img\products-img\img-06-normal.jpg" />
+    <Content Include="img\products-img\img-07-hover.jpg" />
+    <Content Include="img\products-img\img-07-normal.jpg" />
+    <Content Include="img\products-img\img-08-hover.jpg" />
+    <Content Include="img\products-img\img-08-normal.jpg" />
+    <Content Include="img\products-img\img-09-hover.jpg" />
+    <Content Include="img\products-img\img-09-normal.jpg" />
+    <Content Include="img\products-img\img-10-hover.jpg" />
+    <Content Include="img\products-img\img-10-normal.jpg" />
+    <Content Include="img\products-img\img-11-hover.jpg" />
+    <Content Include="img\products-img\img-11-normal.jpg" />
+    <Content Include="img\products-img\img-12-hover.jpg" />
+    <Content Include="img\products-img\img-12-normal.jpg" />
+    <Content Include="img\products-img\thumb-01.jpg" />
+    <Content Include="img\products-img\thumb-02.jpg" />
+    <Content Include="img\products-img\thumb-03.jpg" />
+    <Content Include="img\testimonial-img\01.jpg" />
+    <Content Include="img\testimonial-img\02.jpg" />
+    <Content Include="img\testimonial-img\03.jpg" />
+    <Content Include="img\topics-img\avatar-01.jpg" />
+    <Content Include="img\topics-img\avatar-02.jpg" />
+    <Content Include="img\topics-img\avatar-03.jpg" />
+    <Content Include="img\topics-img\avatar-04.jpg" />
+    <Content Include="img\topics-img\avatar-05.jpg" />
+    <Content Include="img\topics-img\avatar-06.jpg" />
+    <Content Include="img\topics-img\avatar-07.jpg" />
+    <Content Include="img\topics-img\avatar-08.jpg" />
+    <Content Include="img\why-choose-us-img\video-poster-1.jpg" />
+    <Content Include="img\why-choose-us-img\video-poster-2.jpg" />
+    <Content Include="img\widgets-img\ad.jpg" />
+    <Content Include="img\widgets-img\cart-widget\01.jpg" />
+    <Content Include="img\widgets-img\cart-widget\02.jpg" />
+    <Content Include="img\widgets-img\cart-widget\03.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\01.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\02.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\03.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\04.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\05.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\06.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\07.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\08.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\09.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\10.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\11.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\12.jpg" />
+    <Content Include="img\widgets-img\recent-active-members\13.jpg" />
+    <Content Include="img\widgets-img\review-widget\01.jpg" />
+    <Content Include="img\widgets-img\review-widget\02.jpg" />
+    <Content Include="index.html" />
+    <Content Include="member-activity-favorites.html" />
+    <Content Include="member-activity-friends.html" />
+    <Content Include="member-activity-groups.html" />
+    <Content Include="member-activity-mentions.html" />
+    <Content Include="member-activity-personal.html" />
+    <Content Include="member-forum-favorites.html" />
+    <Content Include="member-forum-replies.html" />
+    <Content Include="member-forum-topics.html" />
+    <Content Include="member-friends.html" />
+    <Content Include="member-groups.html" />
+    <Content Include="member-media-all.html" />
+    <Content Include="member-profile.html" />
+    <Content Include="members.html" />
+    <Content Include="product-details.html" />
+    <Content Include="products.html" />
+    <Content Include="Scripts\color-switcher.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\plugins.min.js" />
+    <Content Include="Content\style.css" />
+    <Content Include="sub-forums.html" />
+    <Content Include="topic-replies.html" />
+    <Content Include="topics.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont3e6e.eot" />
+    <Content Include="fonts\fontawesome-webfont3e6e.ttf" />
+    <Content Include="fonts\fontawesome-webfont3e6e.woff" />
+    <Content Include="fonts\fontawesome-webfont3e6e.woff2" />
+    <Content Include="fonts\fontawesome-webfontd41d.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regulard41d.eot" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51689</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51689/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
